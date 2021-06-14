@@ -57,6 +57,17 @@ function Navbar() {
             color: 'green'
           }}
           >Discussions</NavLink>
+          <NavLink
+          to="/user"
+          
+          exact
+          
+          style={link}
+          
+          activeStyle={{
+            color: 'green'
+          }}
+          >Profile</NavLink>
         </div>
     )
 
