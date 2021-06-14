@@ -40,3 +40,10 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.nav {
+  background-color: #282c34;
+  height: 2.5rem;
+  text-align: left;
+  font-size: x-large;
+}

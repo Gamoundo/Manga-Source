@@ -2,17 +2,17 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const link = {
-    width: '100px',
-    padding: '12px',
+    width: '50px',
+    padding: '4px',
     margin: '0 6px 6px',
-    background: 'red',
+
     textDecoration: 'none',
     color: 'pink',
   }
 
 function Navbar() {
     return (
-        <div>
+        <div className="nav">
             <NavLink
           to="/"
           
@@ -21,7 +21,7 @@ function Navbar() {
           style={link}
           
           activeStyle={{
-            background: 'green'
+            color: 'green'
           }}
           >Home</NavLink>
           <NavLink
@@ -32,7 +32,7 @@ function Navbar() {
           style={link}
           
           activeStyle={{
-            background: 'green'
+            color: 'green'
           }}
           >Manga</NavLink>
           <NavLink
@@ -43,7 +43,7 @@ function Navbar() {
           style={link}
           
           activeStyle={{
-            background: 'green'
+            color: 'green'
           }}
           >Posts</NavLink>
           <NavLink
@@ -54,7 +54,7 @@ function Navbar() {
           style={link}
           
           activeStyle={{
-            background: 'green'
+            color: 'green'
           }}
           >Discussions</NavLink>
         </div>
