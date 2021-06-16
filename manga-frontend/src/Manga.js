@@ -18,7 +18,7 @@ class Manga extends React.Component {
           console.log(genres)
             return (genres.map((genre) => {
                return(
-                <div>
+                <div className="genre">
                     <p>{genre}</p>
                 </div>
                ) 
@@ -27,10 +27,16 @@ class Manga extends React.Component {
         }
         return (array.map((element) => {
             return(
-                <div className="project">
-                    <h3> {element.name}</h3>
+                <div className="manga">
+                   <div>
+                   <h3> {element.name}</h3>
+                   <p> {element.summary}</p>
+                   </div>
+                    <div className="genres">
                     {displayGenres(element.genres)}
-                    <p> {element.summary}</p>
+                    </div>
+                    
+                    
                     
                 </div>
             )

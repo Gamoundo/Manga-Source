@@ -1,5 +1,5 @@
 body {
-  background-color: purple;
+  background-color: rosybrown;
 }
 .App {
   text-align: center;
@@ -46,4 +46,27 @@ body {
   height: 2.5rem;
   text-align: left;
   font-size: x-large;
+}
+
+.genres {
+  display: inline-flex;
+  text-align: left;
+  position:absolute;
+  left: 0;
+  
+  color: green
+}
+
+.manga {
+  background-color: rgb(34, 22, 4);
+  width: 20rem;
+  height: 15rem;
+  color: orchid;
+  text-align: left;
+}
+
+.genre {
+padding: 1rem 1rem;
+border-radius: 1rem;
+border-color: indianred;
 }
