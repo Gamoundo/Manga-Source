@@ -2,6 +2,9 @@ import React from 'react'
 
 class Posts extends React.Component {
 
+    state ={
+        post: []
+    }
     render() {
         return (
         <div className="post">
