@@ -39,6 +39,8 @@ let uD = []
 uP.push(posts.filter(post => post.userName === "Joe"))
 uD.push(discussions.filter(discus => discus.userName === "Joe"))
 
+console.log(uP)
+
 
 
   return (
@@ -48,8 +50,22 @@ uD.push(discussions.filter(discus => discus.userName === "Joe"))
       <Navbar />
 
       <Route exact path= '/' />
-      <Route exact path= '/posts' component ={Posts}/>
-      <Route exact path= '/discussions' component ={Discussions}/>
+      <Route exact path= '/posts'  render={routeProps => (
+        <Posts 
+        {...routeProps}
+        allPosts={posts}
+        
+        />
+        )}
+        />
+      <Route exact path= '/discussions'  render={routeProps => (
+        <Discussions 
+        {...routeProps}
+        
+        Disc={discussions}
+        />
+        )}
+        />
       <Route exact path= '/manga' component ={Manga}/>
       <Route exact path= '/user'  render={routeProps => (
         <User 
