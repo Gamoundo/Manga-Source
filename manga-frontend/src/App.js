@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Posts from './Posts';
@@ -6,6 +7,7 @@ import Discussions from './Discussions';
 import Navbar from './Navbar'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import User from './User';
+import PostBtn from './PostBtn';
 
 function App() {
 
@@ -33,6 +35,12 @@ let discussions = [
     responses: []
   }
 ]
+
+
+const addPost = (e) => {
+  posts.push(e)
+}
+
 
 let uP = []
 let uD = []
@@ -72,6 +80,13 @@ console.log(uP)
         {...routeProps}
         userPosts={uP}
         userDisc={uD}
+        />
+        )}
+        />
+        <Route exact path= '/PostBtn'  render={routeProps => (
+        <PostBtn 
+        {...routeProps}
+        addFn={addPost}
         />
         )}
         />

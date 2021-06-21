@@ -30,7 +30,7 @@ class Discussions extends React.Component {
     render() {
         return (
             <div>
-              <h1> A place to talk anout Manga</h1>
+              <h1> A place to talk about Manga</h1>
               {this.state.discus && this.displayDiscs()}
               <button> New Discussion</button>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Comment from './Comment'
+import PostBtn from './PostBtn'
 
 class Posts extends React.Component {
 
@@ -33,7 +34,7 @@ class Posts extends React.Component {
         <div className="post">
             <h3>A place to inquire about Manga</h3>
             {this.state.posts && this.displayPosts()}
-            <button> New Post</button>
+            <PostBtn />
         </div>
 
         
