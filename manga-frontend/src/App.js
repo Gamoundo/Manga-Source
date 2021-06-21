@@ -62,7 +62,7 @@ console.log(uP)
         <Discussions 
         {...routeProps}
         
-        Disc={discussions}
+        disc={discussions}
         />
         )}
         />

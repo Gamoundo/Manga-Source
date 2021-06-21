@@ -31,7 +31,7 @@ class Posts extends React.Component {
         console.log(this.props.allPosts)
         return (
         <div className="post">
-            <h3>hi</h3>
+            <h3>A place to inquire about Manga</h3>
             {this.state.posts && this.displayPosts()}
             <button> New Post</button>
         </div>
