@@ -5,9 +5,29 @@ import PostBtn from './PostBtn'
 class Posts extends React.Component {
 
     state ={
-        posts: this.props.allPosts || []
+        posts: [
+            {
+              userName: "Joe",
+              title: "Samurai manga?",
+              content: "anyone remembers a manga where a samurai is fighting a mechanical bear? Can't remember any other details.",
+              responses: []
+            },
+            {
+              userName: "Sara",
+              title: "Gun fu?",
+              content: "Any mangas with some great gun kata?",
+              responses: []
+            }
+          
+          ]
 
     }
+
+    addPost = (post) => {
+        this.setState(prevState => ({
+            posts: [...prevState.posts, post]
+        }))
+      }
 
     displayPosts = () => {
         
@@ -29,12 +49,12 @@ class Posts extends React.Component {
         }))
     }
     render() {
-        console.log(this.props.allPosts)
+        
         return (
         <div className="post">
             <h3>A place to inquire about Manga</h3>
             {this.state.posts && this.displayPosts()}
-            <PostBtn />
+            <PostBtn addPost={this.addPost} />
         </div>
 
         

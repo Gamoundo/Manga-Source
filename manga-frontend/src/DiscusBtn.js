@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from "react-bootstrap/Modal"
 
-function PostBtn(props) {
+function DiscusBtn(props) {
 
     const [show, setShow] = useState(false);
     const handleClose = () =>  setShow(false);
@@ -18,7 +18,7 @@ function PostBtn(props) {
             reponses: []
         }
 
-        props.addPost(newPost)
+        props.addDisc(newPost)
 
     }
 
@@ -26,14 +26,14 @@ function PostBtn(props) {
         
         <div>
             <button variant="primary" onClick={handleShow}>
-        Inquire
+        Theorize
       </button>
             
             
             <Modal className="form" show={show}>
             <Modal.Header closeButton onClick={handleClose}>
                 <Modal.Title id="Joy">
-                    Find your manga!
+                    Talk about manga!
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -65,4 +65,4 @@ function PostBtn(props) {
 
 }
 
-export default PostBtn;
+export default DiscusBtn;
