@@ -11,7 +11,16 @@ import User from './User';
 
 function App() {
 
-
+let users = [
+  {
+    name: "joe",
+    pwd: "fish"
+  },
+  {
+    name: "sara",
+    pwd: "bellum"
+  }
+]
 
 
 
