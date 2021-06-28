@@ -68,6 +68,17 @@ function Navbar() {
             color: 'green'
           }}
           >Profile</NavLink>
+          <NavLink
+          to="/register"
+          
+          exact
+          
+          style={link}
+          
+          activeStyle={{
+            color: 'green'
+          }}
+          >Register</NavLink>
         </div>
     )
 

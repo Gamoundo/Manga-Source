@@ -7,6 +7,7 @@ import Discussions from './Discussions';
 import Navbar from './Navbar'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import User from './User';
+import Register from './Register';
 
 
 function App() {
@@ -23,7 +24,10 @@ let users = [
 ]
 
 
-
+let currentUser = {
+  name: "",
+  pwd: ""
+}
 
 
 
@@ -44,7 +48,7 @@ let users = [
       <Route exact path= '/discussions' component={Discussions}/>
       <Route exact path= '/manga' component ={Manga} />
       <Route exact path= '/user'  component={User} />
-       
+      <Route exact path= '/register'  component={Register} />
     </div>
     </Router>
     
