@@ -21,6 +21,7 @@ function Register(props) {
             //    console.log(this.state)
             //console.log(user)
             window.localStorage.setItem("Manga Source", JSON.stringify(user))
+            props.changeUser(user)
             history.push('/')
         }
         

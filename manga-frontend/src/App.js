@@ -23,12 +23,16 @@ let users = [
   }
 ]
 
-
+const storedUser= window.localStorage.getItem("Manga Source");
 let currentUser = {
-  name: "",
-  pwd: ""
+  name: storedUser ? JSON.parse(storedUser).name : "",
+  pwd: storedUser ? JSON.parse(storedUser).pwd : ""
 }
 
+const updateUser = (user) => {
+  currentUser.name = user.name
+  currentUser.pwd = user.pwd
+}
 
 
 
@@ -47,8 +51,10 @@ let currentUser = {
       <Route exact path= '/posts'  component={Posts} />
       <Route exact path= '/discussions' component={Discussions}/>
       <Route exact path= '/manga' component ={Manga} />
-      <Route exact path= '/user'  component={User} />
-      <Route exact path= '/register'  component={Register} />
+      <Route exact path= '/user'  render={ routerProps => <User {...routerProps} name={currentUser.name}/>}>
+      </Route> 
+      <Route exact path= '/register'  render={ routerProps => <Register {...routerProps} changeUser={updateUser}/>}>
+      </Route> 
     </div>
     </Router>
     

@@ -4,7 +4,7 @@ class User extends React.Component {
 
     state = {
         userPosts: this.props.userPosts || "nothing to see here.",
-        userName: 'Joe',
+        userName: this.props.name || 'Joe',
         userDiscus: []
     }
     render() {
